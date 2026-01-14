@@ -48,6 +48,6 @@ sudo dnf install stow
 ### 2. Terminal UI Tools
 These tools provide terminal-based Bluetooth and Wi-Fi management via Waybar integration:
 
-[bluetui](https://github.com/pythops/bluetui): Bluetooth manager.
-[wlctl](https://github.com/aashish-thapa/wlctl): Wifi manager.
+* [bluetui](https://github.com/pythops/bluetui): Bluetooth manager
+* [wlctl](https://github.com/aashish-thapa/wlctl): Wifi manager
 
