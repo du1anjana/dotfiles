@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "bluetooth", "network", "battery"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:L%H:%M}",
+        "locale": "en_GB.UTF-8", // This sets Monday as the first day,
+        "tooltip-format": "<span size='16pt'><tt><small>{calendar}</small></tt></span>",
+        "calendar": {
+            "mode"          : "month",
+            "weeks-pos"     : "",
+            "on-scroll"     : 1,
+            "locale": "en_GB.UTF-8",
+            "format": {
+                "months":     "<span color='#cdd6f4'><b>{}</b></span>",
+                "days":       "<span color='#cdd6f4'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#a6e3a1'><b>{}</b></span>",
+                "today":      "<span color='#1e1e2e' background='#a6e3a1'><b>{}</b></span>"
+            }
+        }
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "foot --app-id 'bluetui' -e bluetui"
+
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "foot --app-id 'wlctl' -e wlctl"
+    }
+}
