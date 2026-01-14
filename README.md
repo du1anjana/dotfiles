@@ -43,3 +43,11 @@ The repository is organized by package. Each folder corresponds to a specific ap
 Ensure you have `stow` installed on your Fedora system:
 ```bash
 sudo dnf install stow
+```
+
+### 2. Terminal UI Tools
+These tools provide terminal-based Bluetooth and Wi-Fi management via Waybar integration:
+
+[bluetui](https://github.com/pythops/bluetui): Bluetooth manager.
+[wlctl](https://github.com/aashish-thapa/wlctl): Wifi manager.
+
