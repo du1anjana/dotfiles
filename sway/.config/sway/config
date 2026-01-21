@@ -125,13 +125,13 @@ for_window [app_id="brave-browser"] opacity 0.95
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-
-    # Lock Screen
-    bindsym Mod1+l exec swaylock -f -c 000000
     
     # Reload Waybar
     bindsym $mod+Shift+b exec ~/.config/waybar/reload.sh
-#
+
+    # Open Yazi
+    bindsym $mod+o exec foot yazi
+
 # Moving around:
 #
     # Move your focus around
