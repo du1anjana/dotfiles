@@ -11,7 +11,8 @@
 }
 
 window#waybar {
-    background: transparent;
+    background: @base;
+    /* background: transparent; */
     color: @text;
 }
 
@@ -26,7 +27,7 @@ tooltip label {
 }
 
 #workspaces {
-  margin: 13px 0px 0px 15px;
+  margin: 0px 0px 0px 0px;
 }
 
 #workspaces button {
@@ -50,13 +51,9 @@ tooltip label {
   padding: 0px 5px;
   border: 1px solid @text;
   border-radius: 5px;
-  margin: 13px 0px 0px 15px;
+  margin: 0px 0px 0px 15px;
 }
 
 #clock {
   margin-left: 0px;
-}
-
-#battery {
-  margin-right: 15px;
 }

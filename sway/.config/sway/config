@@ -64,10 +64,10 @@ exec swayidle -w \
 # Read `man 5 sway-input` for more information about this section.
 
 ### Appearance
-gaps inner 10
-gaps outer 5
-default_border pixel 2
-default_floating_border pixel 2
+gaps inner 0
+gaps outer 0
+default_border pixel 1
+default_floating_border pixel 1
 
 # Define a transparent color variable
 set $transparent #00000000
@@ -79,9 +79,9 @@ client.focused_inactive     $transparent     #1e1e2e      #cdd6f4     $transpare
 client.unfocused            $transparent     #1e1e2e      #cdd6f4     $transparent      $transparent
 
 # show gaps even if one tile is present
-smart_gaps off
+smart_gaps on
 # Hide window borders if there is only one window
-smart_borders off
+smart_borders on
 
 # Float and center the Network Manager & Bluetooth Manager
 for_window [app_id="wlctl|bluetui"] {
@@ -89,15 +89,12 @@ for_window [app_id="wlctl|bluetui"] {
     sticky enable
     resize set 900 px 600 px
     move position center
-    border pixel 2
+    border pixel 1
 }
 for_window [app_id="floating_terminal"] floating enable, resize set 800 500, move position center
 
 # Transparency for all windows
-for_window [class=".*"] opacity 0.9
-# Specific opacities
-for_window [app_id="brave-browser"] opacity 0.95
-for_window [app_id="app.zen_browser.zen"] opacity 0.95
+for_window [class=".*"] opacity 1
 
 ### Key bindings
 #
