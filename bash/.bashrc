@@ -26,4 +26,6 @@ unset rc
 
 export TERMINAL=foot
 export EDITOR=nvim
+export SUDO_EDITOR="nvim"
 export PATH="$HOME/.cargo/bin:$PATH"
+export _JAVA_AWT_WM_NONREPARENTING=1
