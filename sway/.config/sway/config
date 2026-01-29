@@ -97,6 +97,7 @@ for_window [app_id="floating_terminal"] floating enable, resize set 800 500, mov
 for_window [class=".*"] opacity 0.9
 # Specific opacities
 for_window [app_id="brave-browser"] opacity 0.95
+for_window [app_id="app.zen_browser.zen"] opacity 0.95
 
 ### Key bindings
 #
