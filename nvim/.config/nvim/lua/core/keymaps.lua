@@ -19,7 +19,7 @@ keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
 -- Select all
-keymap("n", "<C-a>", "ggVG", opts)
+keymap("n", "<leader>a", "ggVG", opts)
 
 -- Retain selected contents when indenting
 keymap("v", "<", "<gv", opts)
@@ -29,8 +29,8 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<CR>", "o<Esc>", opts) 
 
 -- move selection in visual mode
-keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -42,5 +42,5 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<leader>s", ":w<CR>", opts) 
 
 -- Quit
-keymap("n", "<leader>q", ":q<CR>", opts) 
+keymap("n", "<leader>q", ":q!<CR>", opts) 
 
