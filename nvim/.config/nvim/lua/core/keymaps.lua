@@ -29,8 +29,8 @@ keymap("v", ">", ">gv", opts)
 keymap("n", "<CR>", "o<Esc>", opts) 
 
 -- move selection in visual mode
-keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -41,6 +41,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Save file
 keymap("n", "<leader>s", ":w<CR>", opts) 
 
--- Quit
+-- Quit without saving
 keymap("n", "<leader>q", ":q!<CR>", opts) 
 
+vim.keymap.set('n', '<leader>r', ':w<CR>:!javac % && java %:r<CR>', { desc = "Compile and Run Java" })
