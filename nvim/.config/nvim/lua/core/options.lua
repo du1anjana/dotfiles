@@ -3,8 +3,8 @@ vim.opt.clipboard = "unnamedplus"    -- enable clipboard
 vim.opt.termguicolors = true    -- enable 24-bit colour
 vim.opt.showmode = false    -- don't show current mode
 
-vim.opt.tabstop = 2    -- set tab length to 2
-vim.opt.shiftwidth = 2    -- set auto indent to 2
+vim.opt.tabstop = 4    -- set tab length to 2
+vim.opt.shiftwidth = 4    -- set auto indent to 2
 vim.opt.expandtab = true    -- convert tab into spaces
 
 vim.opt.number = true    -- show line numbers
